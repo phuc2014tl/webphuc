@@ -1,0 +1,44 @@
+<ng-container *ngIf="vm$ | ngrxPush as vm">
+    <form [formGroup]="vm.addform">
+        <h1 mat-dialog-title>Add</h1>
+        <div mat-dialog-content>
+            <mat-form-field appearance="outline">
+                <mat-label>ID</mat-label>
+                <input formControlName="id" matInput placeholder="ID" /> </mat-form-field><br />
+            <mat-form-field appearance="outline">
+                <mat-label>Title</mat-label>
+                <input formControlName="title" matInput placeholder="Title" /> </mat-form-field><br />
+            <mat-form-field appearance="outline">
+                <mat-label>Description</mat-label>
+                <input formControlName="description" matInput placeholder="Description" /> </mat-form-field><br />
+            <mat-form-field appearance="outline">
+                <mat-label>Date</mat-label>
+                <input formControlName="date" matInput [matDatepicker]="picker" />
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Hour</mat-label>
+                <input formControlName="hour" matInput placeholder="Hour" /> </mat-form-field><br />
+            <mat-form-field appearance="outline">
+                <mat-label>Responsable</mat-label>
+                <input formControlName="responsable" matInput placeholder="Responsable" /> </mat-form-field><br />
+            <mat-form-field appearance="outline">
+                <mat-label>Status</mat-label>
+                <input formControlName="status" matInput placeholder="Status" /> </mat-form-field><br />
+            <mat-form-field appearance="outline">
+                <mat-label>CreatedBy</mat-label>
+                <input formControlName="createdBy" matInput placeholder="CreatedBy" /> </mat-form-field><br />
+            <mat-form-field appearance="outline">
+                <mat-label>LastChangedBy</mat-label>
+                <input formControlName="lastChangedBy" matInput placeholder="LastChangedBy" /> </mat-form-field><br />
+            <div mat-dialog-actions [align]="'end'">
+                <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+                <button style="margin-left: 10px" mat-raised-button color="primary" (click)="Add()">
+          Save
+        </button>
+            </div>
+        </div>
+    </form>
+</ng-container>

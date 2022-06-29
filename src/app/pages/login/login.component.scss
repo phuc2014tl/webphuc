@@ -1,0 +1,155 @@
+.formloginpage {
+    height: 355px;
+    width: 513px;
+    left: 320px;
+    top: 173px;
+    border-radius: 20px;
+    background: #ffffff;
+    text-align: center;
+}
+
+h1 {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100px;
+    color: #e22f08;
+    margin-bottom: -20px;
+}
+
+h2 {
+    font-family: "Roboto";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    color: #8e8e8e;
+    margin-bottom: 35px;
+}
+
+mat-form-field {
+    width: 431px;
+    height: 45px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    color: #484848;
+    margin-bottom: 20px;
+}
+
+button {
+    width: 431px;
+    height: 45px;
+    left: 361px;
+    top: 444px;
+    background: #ff5733;
+    border-radius: 12px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    color: #ffffff;
+    margin-top: 12px;
+    border-color: #fff;
+    border-style: solid;
+}
+
+mat-icon {
+    display: inline-block;
+    width: 1em;
+    height: 0.9em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+    padding-left: 5px;
+    padding-top: 12px;
+    margin-right: 12px;
+}
+
+mat-error {
+    font-family: "Roboto";
+    font-style: normal;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    margin-top: 2px;
+    margin-bottom: 20px;
+    color: #e30707;
+}
+
+::ng-deep .mat-form-field-outline:not(.mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick) {
+    box-sizing: border-box;
+    position: absolute;
+    width: 431px;
+    height: 45px;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-thick:not(.mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick) {
+    color: #ff5733 !important;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-start {
+    border-top-left-radius: 12px !important;
+    border-bottom-left-radius: 12px !important;
+    min-width: 50px !important;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-end {
+    border-top-right-radius: 12px !important;
+    border-bottom-right-radius: 12px !important;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-gap {
+    border-radius: unset;
+}
+
+mat-spinner {
+    position: absolute;
+    top: 42%;
+    left: 47%;
+    z-index: 5;
+}
+
+ ::ng-deep .mat-progress-spinner circle,
+.mat-spinner circle {
+    stroke: #FFFFFF;
+}
+
+ ::ng-deep .track circle {
+    stroke-opacity: 0.3 !important;
+}
+
+.loading {
+    .mat-progress-spinner {
+        display: inline;
+    }
+}
+
+.textloading {
+    position: absolute;
+    z-index: 5;
+    width: 111px;
+    height: 27px;
+    left: 720px;
+    top: 415px;
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: #FFFFFF;
+}
+
+.loadingcolor {
+    position: absolute;
+    left: 0.09%;
+    right: -0.09%;
+    top: 0%;
+    bottom: 0%;
+    background: rgba(4, 18, 88, 0.4);
+}

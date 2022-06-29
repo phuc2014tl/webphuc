@@ -1,0 +1,35 @@
+<ng-container *ngIf="vm$ | ngrxPush as vm">
+    <div class="loginpage">
+        <div class="formloginpage">
+            <h1>Sign In</h1>
+            <h2>Please input your Login details to gain access.</h2>
+            <form [formGroup]="vm.login">
+                <div *ngIf="vm.showspinner" class="loading">
+                    <mat-spinner class="track" strokeWidth="12" mode="determinate" value="100"></mat-spinner>
+                    <mat-spinner strokeWidth="12"></mat-spinner>
+                    <div class="textloading">Loading...</div>
+                    <div class="loadingcolor"></div>
+                </div>
+                <mat-form-field appearance="outline">
+                    <input matInput type="text" formControlName="email" placeholder="Enter your email address" />
+                    <mat-error *ngIf="vm.login.controls.email.errors" class="text-danger">
+                        <mat-error *ngIf="vm.login.controls.email.errors.email">
+                            Must be a valid email address
+                        </mat-error>
+                    </mat-error>
+                    <mat-icon matPrefix svgIcon="mail"></mat-icon>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <input matInput type="password" formControlName="password" placeholder="Enter your password" />
+                    <mat-error *ngIf="vm.login.controls.password.errors" class="text-danger">
+                        <mat-error *ngIf="vm.login.controls.password.errors.minlength">
+                            Password must be at least 6 characters
+                        </mat-error>
+                    </mat-error>
+                    <mat-icon matPrefix svgIcon="lock"></mat-icon>
+                </mat-form-field>
+                <button (click)="onSubmit()">Log In</button>
+            </form>
+        </div>
+    </div>
+</ng-container>

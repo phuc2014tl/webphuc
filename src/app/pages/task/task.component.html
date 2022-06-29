@@ -1,0 +1,65 @@
+<app-header [headertitle]="'Task'" [iconheader]="'Vectorsidebar'"></app-header>
+<app-sider-bar></app-sider-bar>
+<div class="task">
+    <mat-card class="todo">
+        <mat-icon class="icontodo" matPrefix svgIcon="todo"></mat-icon>To Do
+        <h1 class="todo10">10</h1>
+    </mat-card>
+    <mat-card class="inprogress">
+        <mat-icon class="iconinprogress" matPrefix svgIcon="inprogress"></mat-icon>In progress
+        <h1 class="inprogress10">10</h1>
+    </mat-card>
+    <mat-card class="today">
+        <mat-icon class="icontoday" matPrefix svgIcon="check"></mat-icon>Done Today
+        <h1 class="today10">10</h1>
+    </mat-card>
+    <ng-container *ngIf="vm$ | ngrxPush as vm">
+        <ul>
+            <mat-card class="tabtodo"><br />
+                <span class="title">{{ vm.datatask?.title }}</span>
+                <span class="content">{{ vm.datatask?.description }}</span>
+                <span class="datetime">{{ vm.datatask?.date.slice(4, 15) }}</span>
+                <mat-icon class="iconuser" matSuffix svgIcon="user"></mat-icon>
+                <mat-icon class="iconedit" matSuffix svgIcon="edit"></mat-icon>
+            </mat-card>
+            <mat-card class="tabtodo"><br />
+                <span class="title">{{ vm.datatask?.title }}</span>
+                <span class="content">{{ vm.datatask?.description }}</span>
+                <span class="datetime">{{ vm.datatask?.date.slice(4, 15) }}</span>
+                <mat-icon class="iconuser" matSuffix svgIcon="user"></mat-icon>
+                <mat-icon class="iconedit" matSuffix svgIcon="edit"></mat-icon>
+            </mat-card>
+            <mat-card class="tabtodo"><br />
+                <span class="title">{{ vm.datatask?.title }}</span>
+                <span class="content">{{ vm.datatask?.description }}</span>
+                <span class="datetime">{{ vm.datatask?.date.slice(4, 15) }}</span>
+                <mat-icon class="iconuser" matSuffix svgIcon="user"></mat-icon>
+                <mat-icon class="iconedit" matSuffix svgIcon="edit"></mat-icon>
+            </mat-card>
+        </ul>
+
+        <ul>
+            <mat-card class="tabinprogress"><br />
+                <span class="title">{{ vm.datatask?.title }}</span>
+                <span class="content">{{ vm.datatask?.description }}</span>
+                <span class="datetime">{{ vm.datatask?.date.slice(4, 15) }}</span>
+                <mat-icon class="iconuser" matSuffix svgIcon="user"></mat-icon>
+                <mat-icon class="iconedit" matSuffix svgIcon="edit"></mat-icon>
+            </mat-card>
+        </ul>
+        <ul>
+            <mat-card class="tabdonetoday"><br />
+                <span class="title">{{ vm.datatask?.title }}</span>
+                <span class="content">{{ vm.datatask?.description }}</span>
+                <span class="datetime">{{ vm.datatask?.date.slice(4, 15) }}</span>
+                <mat-icon class="iconuser" matSuffix svgIcon="user"></mat-icon>
+                <mat-icon class="iconedit" matSuffix svgIcon="edit"></mat-icon>
+            </mat-card>
+        </ul>
+        <button (click)="store.openDialog()">
+        <mat-icon class="iconadd" matSuffix svgIcon="Add"></mat-icon>
+        <mat-icon class="iconadd1" matSuffix svgIcon="Add"></mat-icon>
+        <mat-icon class="iconadd2" matSuffix svgIcon="Add"></mat-icon>
+    </button>
+    </ng-container>
+</div>
